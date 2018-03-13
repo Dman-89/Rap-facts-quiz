@@ -12,6 +12,7 @@
         android:scaleType="centerCrop"/>
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_below="@id/quiz_header"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,7 +36,7 @@
 
                 <EditText
                     style="@style/edittext"
-                    android:id="@+id/answer_question_1"
+                    android:id="@+id/edittext_1"
                     android:hint="@string/edittext_hint" />
 
                 <TextView
@@ -52,6 +53,7 @@
                     style="@style/question_header"/>
 
                 <RadioGroup
+                    android:id="@+id/radiogroup2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -96,17 +98,17 @@
 
                         <CheckBox
                             style="@style/radio_and_checkbox"
-                            android:id="@+id/answer_question_3-1"
+                            android:id="@+id/checkbox_3-1"
                             android:text="Mos Def" />
 
                         <CheckBox
                             style="@style/radio_and_checkbox"
-                            android:id="@+id/answer_question_3-2"
+                            android:id="@+id/checkbox_3-2"
                             android:text="Ludacris" />
 
                         <CheckBox
                             style="@style/radio_and_checkbox"
-                            android:id="@+id/answer_question_3-3"
+                            android:id="@+id/checkbox_3-3"
                             android:text="Snoop Dogg" />
 
                     </LinearLayout>
@@ -121,17 +123,17 @@
 
                         <CheckBox
                             style="@style/radio_and_checkbox"
-                            android:id="@+id/answer_question_3-4"
+                            android:id="@+id/checkbox_3-4"
                             android:text="Talib Kweli" />
 
                         <CheckBox
                             style="@style/radio_and_checkbox"
-                            android:id="@+id/answer_question_3-5"
+                            android:id="@+id/checkbox_3-5"
                             android:text="Rick Ross" />
 
                         <CheckBox
                             style="@style/radio_and_checkbox"
-                            android:id="@+id/answer_question_3-6"
+                            android:id="@+id/checkbox_3-6"
                             android:text="Lil' Jon" />
 
                     </LinearLayout>
@@ -152,6 +154,7 @@
                     style="@style/question_header"/>
 
                 <RadioGroup
+                    android:id="@+id/radiogroup4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -183,7 +186,7 @@
 
                 <EditText
                     style="@style/edittext"
-                    android:id="@+id/answer_question_5"
+                    android:id="@+id/edittext_5"
                     android:inputType="number"
                     android:hint="@string/edittext_hint" />
 
@@ -207,7 +210,7 @@
                     >
 
                     <RadioGroup
-                        android:id="@+id/radioGroup6_1"
+                        android:id="@+id/radiogroup6_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -216,19 +219,19 @@
                         android:layout_weight="1" >
 
                         <RadioButton
-                            android:id="@+id/rb6_1_1"
+                            android:id="@+id/radiobutton6_1_1"
                             style="@style/radio_and_checkbox"
                             android:text="Easy E"
                             android:onClick="radioGroup6_2dropper" />
 
                         <RadioButton
-                            android:id="@+id/rb6_1_2"
+                            android:id="@+id/radiobutton6_1_2"
                             style="@style/radio_and_checkbox"
                             android:text="Ice Cube"
                             android:onClick="radioGroup6_2dropper" />
 
                         <RadioButton
-                            android:id="@+id/rb6_1_3"
+                            android:id="@+id/radiobutton6_1_3"
                             style="@style/radio_and_checkbox"
                             android:text="Dr. Dre"
                             android:onClick="radioGroup6_2dropper" />
@@ -236,7 +239,7 @@
                     </RadioGroup>
 
                     <RadioGroup
-                        android:id="@+id/radioGroup6_2"
+                        android:id="@+id/radiogroup6_2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -245,19 +248,19 @@
                         android:layout_weight="1" >
 
                         <RadioButton
-                            android:id="@+id/rb6_2_1"
+                            android:id="@+id/radiobutton6_2_1"
                             style="@style/radio_and_checkbox"
                             android:text="Yella"
                             android:onClick="radioGroup6_1dropper" />
 
                         <RadioButton
-                            android:id="@+id/rb6_2_2"
+                            android:id="@+id/radiobutton6_2_2"
                             style="@style/radio_and_checkbox"
                             android:text="Ice T"
                             android:onClick="radioGroup6_1dropper" />
 
                         <RadioButton
-                            android:id="@+id/rb6_2_3"
+                            android:id="@+id/radiobutton6_2_3"
                             style="@style/radio_and_checkbox"
                             android:text="Mc Ren"
                             android:onClick="radioGroup6_1dropper" />
@@ -285,6 +288,7 @@
                     android:orientation="horizontal">
 
                     <RadioGroup
+                        android:id="@+id/radiogroup7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -327,7 +331,7 @@
 
                 <EditText
                     style="@style/edittext"
-                    android:id="@+id/answer_question_8"
+                    android:id="@+id/edittext_8"
                     android:hint="@string/edittext_hint" />
 
                 <TextView
@@ -336,20 +340,35 @@
 
             </LinearLayout>
 
-            <Button
-                android:background="@drawable/button_border"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/check_button"
-                android:textColor="@android:color/white"
-                android:layout_gravity="center"
-                android:layout_marginBottom="12dp"
-                android:onClick="checkAnswers"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    style="@style/buttons"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_border"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset"
+                    android:onClick="reset"/>
+
+                <Button
+                    style="@style/buttons"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/button_border"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_button"
+                    android:onClick="checkAnswers"/>
+
+            </RelativeLayout>
+
 
         </LinearLayout>
 
     </ScrollView>
-
 
     <LinearLayout
         android:id="@+id/quiz_header"
@@ -360,18 +379,13 @@
         android:paddingBottom="10dp" >
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:tint="@android:color/white"
+            style="@style/mics"
             android:layout_weight="1"
             android:src="@drawable/mic2"/>
 
         <ImageView
-            android:layout_width="46dp"
-            android:layout_height="46dp"
-            android:tint="@android:color/white"
+            style="@style/stars"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
             android:src="@drawable/star2_resize"/>
 
         <TextView
@@ -386,17 +400,12 @@
             android:fontFamily="@font/old_english_text"/>
 
         <ImageView
-            android:layout_width="46dp"
-            android:layout_height="46dp"
-            android:tint="@android:color/white"
-            android:layout_gravity="center_vertical"
+            style="@style/stars"
             android:layout_weight="1"
             android:src="@drawable/star2_resize"/>
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:tint="@android:color/white"
+            style="@style/mics"
             android:layout_weight="1"
             android:src="@drawable/micro" />
 
