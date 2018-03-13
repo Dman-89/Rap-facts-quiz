@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="header">It\'s a RAP quiz, hommie!</string>
+    <string name="question1">1. Who is the Best-Selling rapper of All-Time?</string>
+    <string name="question2">2. 50 Cent made the Junior Olympics as a Boxer</string>
+    <string name="question3">3. What rappers have a college degree?</string>
+    <string name="question4">4. Snoop Dogg used to sell drugs to Cameron Diaz</string>
+    <string name="question5">5. At what age Tupac Shakur died?</string>
+    <string name="question6">6. Who was not a member of NWA?</string>
+    <string name="question7">7. James Brown’s “Funky Drummer” is the most sampled song in hip-hop. How many documented songs were sampling it?</string>
+    <string name="question8">8. Who wrote “Buggin” for Bugs Bunny on the Space Jam soundtrack?</string>
+    <string name="check_button">Check answers</string>
+    <string name="true_">true</string>
+    <string name="false_">false</string>
+    <string name="edittext_hint">Write answer here</string>
+</resources>
