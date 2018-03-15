@@ -171,35 +171,35 @@ public class MainActivity extends AppCompatActivity {
         EditText editText1 = (EditText) findViewById(R.id.edittext_1);
         editText1.setText("");
 
-        RadioGroup radiogroup2 = (RadioGroup) findViewById(R.id.radiogroup2);
-        radiogroup2.clearCheck();
+        RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.radiogroup2);
+        radioGroup2.clearCheck();
 
-        CheckBox checkbox3_1 = (CheckBox) findViewById(R.id.checkbox_3_1);
-        CheckBox checkbox3_2 = (CheckBox) findViewById(R.id.checkbox_3_2);
-        CheckBox checkbox3_3 = (CheckBox) findViewById(R.id.checkbox_3_3);
-        CheckBox checkbox3_4 = (CheckBox) findViewById(R.id.checkbox_3_4);
-        CheckBox checkbox3_5 = (CheckBox) findViewById(R.id.checkbox_3_5);
-        CheckBox checkbox3_6 = (CheckBox) findViewById(R.id.checkbox_3_6);
-        checkbox3_1.setChecked(false);
-        checkbox3_2.setChecked(false);
-        checkbox3_3.setChecked(false);
-        checkbox3_4.setChecked(false);
-        checkbox3_5.setChecked(false);
-        checkbox3_6.setChecked(false);
+        CheckBox checkBox3_1 = (CheckBox) findViewById(R.id.checkbox_3_1);
+        CheckBox checkBox3_2 = (CheckBox) findViewById(R.id.checkbox_3_2);
+        CheckBox checkBox3_3 = (CheckBox) findViewById(R.id.checkbox_3_3);
+        CheckBox checkBox3_4 = (CheckBox) findViewById(R.id.checkbox_3_4);
+        CheckBox checkBox3_5 = (CheckBox) findViewById(R.id.checkbox_3_5);
+        CheckBox checkBox3_6 = (CheckBox) findViewById(R.id.checkbox_3_6);
+        checkBox3_1.setChecked(false);
+        checkBox3_2.setChecked(false);
+        checkBox3_3.setChecked(false);
+        checkBox3_4.setChecked(false);
+        checkBox3_5.setChecked(false);
+        checkBox3_6.setChecked(false);
 
-        RadioGroup radiogroup4 = (RadioGroup) findViewById(R.id.radiogroup4);
-        radiogroup4.clearCheck();
+        RadioGroup radioGroup4 = (RadioGroup) findViewById(R.id.radiogroup4);
+        radioGroup4.clearCheck();
 
         EditText editText5 = (EditText) findViewById(R.id.edittext_5);
         editText5.setText("");
 
-        RadioGroup radiogroup6_1 = (RadioGroup) findViewById(R.id.radiogroup6_1);
-        radiogroup6_1.clearCheck();
-        RadioGroup radiogroup6_2 = (RadioGroup) findViewById(R.id.radiogroup6_2);
-        radiogroup6_2.clearCheck();
+        RadioGroup radioGroup6_1 = (RadioGroup) findViewById(R.id.radiogroup6_1);
+        radioGroup6_1.clearCheck();
+        RadioGroup radioGroup6_2 = (RadioGroup) findViewById(R.id.radiogroup6_2);
+        radioGroup6_2.clearCheck();
 
-        RadioGroup radiogroup7 = (RadioGroup) findViewById(R.id.radiogroup7);
-        radiogroup7.clearCheck();
+        RadioGroup radioGroup7 = (RadioGroup) findViewById(R.id.radiogroup7);
+        radioGroup7.clearCheck();
 
         EditText editText8 = (EditText) findViewById(R.id.edittext_8);
         editText8.setText("");
