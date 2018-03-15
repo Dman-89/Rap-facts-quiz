@@ -204,8 +204,8 @@ public class MainActivity extends AppCompatActivity {
         EditText editText8 = (EditText) findViewById(R.id.edittext_8);
         editText8.setText("");
 
-        ScrollView scrollview = (ScrollView) findViewById(R.id.scrollview);
-        scrollview.smoothScrollTo(0,0);
+        ScrollView scrollView = (ScrollView) findViewById(R.id.scrollview);
+        scrollView.smoothScrollTo(0,0);
 
         textView1.setText("");
         textView2.setText("");
