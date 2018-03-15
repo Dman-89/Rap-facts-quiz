@@ -12,100 +12,113 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.res_q1) TextView textView1;
+    @BindView(R.id.res_q2) TextView textView2;
+    @BindView(R.id.res_q3) TextView textView3;
+    @BindView(R.id.res_q4) TextView textView4;
+    @BindView(R.id.res_q5) TextView textView5;
+    @BindView(R.id.res_q6) TextView textView6;
+    @BindView(R.id.res_q7) TextView textView7;
+    @BindView(R.id.res_q8) TextView textView8;
+
+    @BindView(R.id.radiobutton6_1_1) RadioButton radioButton6_1_1;
+    @BindView(R.id.radiobutton6_1_2) RadioButton radioButton6_1_2;
+    @BindView(R.id.radiobutton6_1_3) RadioButton radioButton6_1_3;
+    @BindView(R.id.radiobutton6_2_1) RadioButton radioButton6_2_1;
+    @BindView(R.id.radiobutton6_2_2) RadioButton radioButton6_2_2;
+    @BindView(R.id.radiobutton6_2_3) RadioButton radioButton6_2_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
     // checking every answer one by one
     public void checkAnswers(View view) {
         int totalScore = 0;
 
-        EditText edittext1 = (EditText) findViewById(R.id.edittext_1);
-        TextView textview1 = (TextView) findViewById(R.id.res_q1);
-        String response1 = edittext1.getText().toString().toLowerCase().trim().replaceAll(" +", " ");
+        EditText editText1 = (EditText) findViewById(R.id.edittext_1);
+        String response1 = editText1.getText().toString().toLowerCase().trim().replaceAll(" +", " ");
         if (response1.equals("eminem") | response1.equals("marshal mathers")) {
             totalScore += 1;
-            textview1.setText("Correct");
+            textView1.setText("Correct");
         } else {
-            textview1.setText("Incorrect");
+            textView1.setText("Incorrect");
         }
 
-        RadioButton rb2 = (RadioButton) findViewById(R.id.radio_2_true);
-        TextView textview2 = (TextView) findViewById(R.id.res_q2);
-        if (rb2.isChecked()) {
+        RadioButton radioButton2 = (RadioButton) findViewById(R.id.radio_2_true);
+        if (radioButton2.isChecked()) {
             totalScore += 1;
-            textview2.setText("Correct");
+            textView2.setText("Correct");
         } else {
-            textview2.setText("Incorrect");
+            textView2.setText("Incorrect");
         }
 
         CheckBox checkBox3_1 = (CheckBox) findViewById(R.id.checkbox_3_1);
         CheckBox checkBox3_2 = (CheckBox) findViewById(R.id.checkbox_3_2);
+        CheckBox checkBox3_3 = (CheckBox) findViewById(R.id.checkbox_3_3);
         CheckBox checkBox3_4 = (CheckBox) findViewById(R.id.checkbox_3_4);
+        CheckBox checkBox3_5 = (CheckBox) findViewById(R.id.checkbox_3_5);
         CheckBox checkBox3_6 = (CheckBox) findViewById(R.id.checkbox_3_6);
-        TextView textview3 = (TextView) findViewById(R.id.res_q3);
         if (checkBox3_1.isChecked() & checkBox3_2.isChecked()
-                & checkBox3_4.isChecked() & checkBox3_6.isChecked()) {
+                & checkBox3_4.isChecked() & checkBox3_6.isChecked()
+                & checkBox3_3.isChecked() == false & checkBox3_5.isChecked() == false) {
             totalScore += 1;
-            textview3.setText("Correct");
+            textView3.setText("Correct");
         } else {
-            textview3.setText("Incorrect");
+            textView3.setText("Incorrect");
         }
 
-        RadioButton rb4 = (RadioButton) findViewById(R.id.radio_4_true);
-        TextView textview4 = (TextView) findViewById(R.id.res_q4);
-        if (rb4.isChecked()) {
+        RadioButton radioButton4 = (RadioButton) findViewById(R.id.radio_4_true);
+        if (radioButton4.isChecked()) {
             totalScore += 1;
-            textview4.setText("Correct");
+            textView4.setText("Correct");
         } else {
-            textview4.setText("Incorrect");
+            textView4.setText("Incorrect");
         }
 
-        EditText edittext5 = (EditText) findViewById(R.id.edittext_5);
-        TextView textview5 = (TextView) findViewById(R.id.res_q5);
-        if (edittext5.getText().length()>0) {
-            int response5 = Integer.parseInt(edittext5.getText().toString());
+        EditText editText5 = (EditText) findViewById(R.id.edittext_5);
+        if (editText5.getText().length()>0) {
+            int response5 = Integer.parseInt(editText5.getText().toString());
             if (response5 == 25) {
                 totalScore += 1;
-                textview5.setText("Correct");
+                textView5.setText("Correct");
             }
         } else {
-            textview5.setText("Incorrect");
+            textView5.setText("Incorrect");
         }
 
-        RadioButton radiobutton6_2_2 = (RadioButton) findViewById(R.id.radiobutton6_2_2);
-        TextView textview6 = (TextView) findViewById(R.id.res_q6);
-        if (radiobutton6_2_2.isChecked()) {
+        RadioButton radioButton6_2_2 = (RadioButton) findViewById(R.id.radiobutton6_2_2);
+        if (radioButton6_2_2.isChecked()) {
             totalScore += 1;
-            textview6.setText("Correct");
+            textView6.setText("Correct");
         } else {
-            textview6.setText("Incorrect");
+            textView6.setText("Incorrect");
         }
 
-        RadioButton rb7 = (RadioButton) findViewById(R.id.radio_7);
-        TextView textview7 = (TextView) findViewById(R.id.res_q7);
-        if (rb7.isChecked()) {
+        RadioButton radioButton7 = (RadioButton) findViewById(R.id.radio_7);
+        if (radioButton7.isChecked()) {
             totalScore += 1;
-            textview7.setText("Correct");
+            textView7.setText("Correct");
         } else {
-            textview7.setText("Incorrect");
+            textView7.setText("Incorrect");
         }
 
-        EditText edittext8 = (EditText) findViewById(R.id.edittext_8);
-        TextView textview8 = (TextView) findViewById(R.id.res_q8);
-        String response8 = edittext8.getText().toString().toLowerCase().trim().replaceAll(" +", " ");
+        EditText editText8 = (EditText) findViewById(R.id.edittext_8);
+        String response8 = editText8.getText().toString().toLowerCase().trim().replaceAll(" +", " ");
         if (response8.equals("jay-z") | response8.equals("jay z")) {
             totalScore += 1;
-            textview8.setText("Correct");
+            textView8.setText("Correct");
         } else {
-            textview8.setText("Incorrect");
+            textView8.setText("Incorrect");
         }
 
         String low = "Seems ya're far from rap history";
@@ -133,44 +146,30 @@ public class MainActivity extends AppCompatActivity {
 
     // 6th question RadioGroup union simulation (if LEFT side is checked - RIGHT unchecked)
     public void radioGroup6_2dropper (View view) {
-        RadioButton radiobutton6_1_1 = (RadioButton) findViewById(R.id.radiobutton6_1_1);
-        RadioButton radiobutton6_1_2 = (RadioButton) findViewById(R.id.radiobutton6_1_2);
-        RadioButton radiobutton6_1_3 = (RadioButton) findViewById(R.id.radiobutton6_1_3);
-        RadioButton radiobutton6_2_1 = (RadioButton) findViewById(R.id.radiobutton6_2_1);
-        RadioButton radiobutton6_2_2 = (RadioButton) findViewById(R.id.radiobutton6_2_2);
-        RadioButton radiobutton6_2_3 = (RadioButton) findViewById(R.id.radiobutton6_2_3);
-
-        if (radiobutton6_1_1.isChecked() | radiobutton6_1_2.isChecked() | radiobutton6_1_3.isChecked()) {
-            if (radiobutton6_2_1.isChecked() | radiobutton6_2_2.isChecked() | radiobutton6_2_3.isChecked()) {
-                radiobutton6_2_1.setChecked(false);
-                radiobutton6_2_2.setChecked(false);
-                radiobutton6_2_3.setChecked(false);
+        if (radioButton6_1_1.isChecked() | radioButton6_1_2.isChecked() | radioButton6_1_3.isChecked()) {
+            if (radioButton6_2_1.isChecked() | radioButton6_2_2.isChecked() | radioButton6_2_3.isChecked()) {
+                radioButton6_2_1.setChecked(false);
+                radioButton6_2_2.setChecked(false);
+                radioButton6_2_3.setChecked(false);
             }
         }
     }
 
     // 6th question RadioGroup union simulation (if RIGHT side is checked - LEFT unchecked)
     public void radioGroup6_1dropper (View view) {
-        RadioButton radiobutton6_1_1 = (RadioButton) findViewById(R.id.radiobutton6_1_1);
-        RadioButton radiobutton6_1_2 = (RadioButton) findViewById(R.id.radiobutton6_1_2);
-        RadioButton radiobutton6_1_3 = (RadioButton) findViewById(R.id.radiobutton6_1_3);
-        RadioButton radiobutton6_2_1 = (RadioButton) findViewById(R.id.radiobutton6_2_1);
-        RadioButton radiobutton6_2_2 = (RadioButton) findViewById(R.id.radiobutton6_2_2);
-        RadioButton radiobutton6_2_3 = (RadioButton) findViewById(R.id.radiobutton6_2_3);
-
-        if (radiobutton6_2_1.isChecked() | radiobutton6_2_2.isChecked() | radiobutton6_2_3.isChecked()) {
-            if (radiobutton6_1_1.isChecked() | radiobutton6_1_2.isChecked() | radiobutton6_1_3.isChecked()) {
-                radiobutton6_1_1.setChecked(false);
-                radiobutton6_1_2.setChecked(false);
-                radiobutton6_1_3.setChecked(false);
+        if (radioButton6_2_1.isChecked() | radioButton6_2_2.isChecked() | radioButton6_2_3.isChecked()) {
+            if (radioButton6_1_1.isChecked() | radioButton6_1_2.isChecked() | radioButton6_1_3.isChecked()) {
+                radioButton6_1_1.setChecked(false);
+                radioButton6_1_2.setChecked(false);
+                radioButton6_1_3.setChecked(false);
             }
         }
     }
 
-    // resets filled values in quiz questions
+    // resets filled values in quiz questions and textViews indicating correct/incorrect answers after submission
     public void reset (View view) {
-        EditText edittext1 = (EditText) findViewById(R.id.edittext_1);
-        edittext1.setText("");
+        EditText editText1 = (EditText) findViewById(R.id.edittext_1);
+        editText1.setText("");
 
         RadioGroup radiogroup2 = (RadioGroup) findViewById(R.id.radiogroup2);
         radiogroup2.clearCheck();
@@ -191,8 +190,8 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup radiogroup4 = (RadioGroup) findViewById(R.id.radiogroup4);
         radiogroup4.clearCheck();
 
-        EditText edittext5 = (EditText) findViewById(R.id.edittext_5);
-        edittext5.setText("");
+        EditText editText5 = (EditText) findViewById(R.id.edittext_5);
+        editText5.setText("");
 
         RadioGroup radiogroup6_1 = (RadioGroup) findViewById(R.id.radiogroup6_1);
         radiogroup6_1.clearCheck();
@@ -202,10 +201,19 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup radiogroup7 = (RadioGroup) findViewById(R.id.radiogroup7);
         radiogroup7.clearCheck();
 
-        EditText edittext8 = (EditText) findViewById(R.id.edittext_8);
-        edittext8.setText("");
+        EditText editText8 = (EditText) findViewById(R.id.edittext_8);
+        editText8.setText("");
 
         ScrollView scrollview = (ScrollView) findViewById(R.id.scrollview);
         scrollview.smoothScrollTo(0,0);
+
+        textView1.setText("");
+        textView2.setText("");
+        textView3.setText("");
+        textView4.setText("");
+        textView5.setText("");
+        textView6.setText("");
+        textView7.setText("");
+        textView8.setText("");
     }
 }
