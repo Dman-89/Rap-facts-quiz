@@ -49,17 +49,17 @@ public class MainActivity extends AppCompatActivity {
         String response1 = editText1.getText().toString().toLowerCase().trim().replaceAll(" +", " ");
         if (response1.equals("eminem") | response1.equals("marshal mathers")) {
             totalScore += 1;
-            textView1.setText("Correct");
+            textView1.setText(getString(R.string.correct));
         } else {
-            textView1.setText("Incorrect");
+            textView1.setText(getString(R.string.incorrect));
         }
 
         RadioButton radioButton2 = (RadioButton) findViewById(R.id.radio_2_true);
         if (radioButton2.isChecked()) {
             totalScore += 1;
-            textView2.setText("Correct");
+            textView2.setText(getString(R.string.correct));
         } else {
-            textView2.setText("Incorrect");
+            textView2.setText(getString(R.string.incorrect));
         }
 
         CheckBox checkBox3_1 = (CheckBox) findViewById(R.id.checkbox_3_1);
@@ -72,17 +72,17 @@ public class MainActivity extends AppCompatActivity {
                 & checkBox3_4.isChecked() & checkBox3_6.isChecked()
                 & checkBox3_3.isChecked() == false & checkBox3_5.isChecked() == false) {
             totalScore += 1;
-            textView3.setText("Correct");
+            textView3.setText(getString(R.string.correct));
         } else {
-            textView3.setText("Incorrect");
+            textView3.setText(getString(R.string.incorrect));
         }
 
         RadioButton radioButton4 = (RadioButton) findViewById(R.id.radio_4_true);
         if (radioButton4.isChecked()) {
             totalScore += 1;
-            textView4.setText("Correct");
+            textView4.setText(getString(R.string.correct));
         } else {
-            textView4.setText("Incorrect");
+            textView4.setText(getString(R.string.incorrect));
         }
 
         EditText editText5 = (EditText) findViewById(R.id.edittext_5);
@@ -90,41 +90,41 @@ public class MainActivity extends AppCompatActivity {
             int response5 = Integer.parseInt(editText5.getText().toString());
             if (response5 == 25) {
                 totalScore += 1;
-                textView5.setText("Correct");
+                textView5.setText(getString(R.string.correct));
             }
         } else {
-            textView5.setText("Incorrect");
+            textView5.setText(getString(R.string.incorrect));
         }
 
         RadioButton radioButton6_2_2 = (RadioButton) findViewById(R.id.radiobutton6_2_2);
         if (radioButton6_2_2.isChecked()) {
             totalScore += 1;
-            textView6.setText("Correct");
+            textView6.setText(getString(R.string.correct));
         } else {
-            textView6.setText("Incorrect");
+            textView6.setText(getString(R.string.incorrect));
         }
 
         RadioButton radioButton7 = (RadioButton) findViewById(R.id.radio_7);
         if (radioButton7.isChecked()) {
             totalScore += 1;
-            textView7.setText("Correct");
+            textView7.setText(getString(R.string.correct));
         } else {
-            textView7.setText("Incorrect");
+            textView7.setText(getString(R.string.incorrect));
         }
 
         EditText editText8 = (EditText) findViewById(R.id.edittext_8);
         String response8 = editText8.getText().toString().toLowerCase().trim().replaceAll(" +", " ");
         if (response8.equals("jay-z") | response8.equals("jay z")) {
             totalScore += 1;
-            textView8.setText("Correct");
+            textView8.setText(getString(R.string.correct));
         } else {
-            textView8.setText("Incorrect");
+            textView8.setText(getString(R.string.incorrect));
         }
 
-        String low = "Seems ya're far from rap history";
-        String medium = "Ya know a thang bout real-deal rappers";
-        String high = "Man, ya're a true rap fan";
-        String all = "Snoop, ain't that you, hommie? Or maybe Dre?";
+        String low = getString(R.string.low_score);
+        String medium = getString(R.string.medium_score);
+        String high = getString(R.string.high_score);
+        String all = getString(R.string.all_score);
 
         Context context = getApplicationContext();
         String total = totalScore + "/8  ";

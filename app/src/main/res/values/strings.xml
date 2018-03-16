@@ -14,4 +14,10 @@
     <string name="false_">false</string>
     <string name="edittext_hint">Write answer here</string>
     <string name="reset">reset quiz</string>
+    <string name="low_score">Seems ya\'re far from rap history</string>
+    <string name="medium_score">Ya know a thang bout real-deal rappers</string>
+    <string name="high_score">Man, ya\'re a true rap fan</string>
+    <string name="all_score">Snoop, ain\'t that you, hommie? Or maybe Dre?</string>
+    <string name="correct">Correct</string>
+    <string name="incorrect">Incorrect</string>
 </resources>
